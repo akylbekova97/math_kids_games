@@ -1,0 +1,59 @@
+export function Footer() {
+  return (
+    <footer
+      className='
+        max-w-[700px]
+        w-full
+        flex
+        justify-between
+        mx-auto
+        gap-[8px]
+      '
+    >
+      <button
+        className='
+          py-[10px]
+          px-[15px]
+          border-none
+          rounded-[5px]
+          bg-[rgb(150,188,231)]
+          text-[16px]
+        '
+        type='button'
+      >
+        Назад
+      </button>
+
+      <button
+        className='
+          cursor-pointer
+          text-[16px]
+          text-white
+          w-full
+          py-[10px]
+          px-[15px]
+          border-none
+          rounded-[5px]
+          bg-[rgb(173,128,216)]
+        '
+        type='submit'
+      >
+        Проверить
+      </button>
+
+      <button
+        className='
+          py-[10px]
+          px-[15px]
+          border-none
+          rounded-[5px]
+          bg-[rgb(150,188,231)]
+          text-[16px]
+        '
+        type='button'
+      >
+        Далее
+      </button>
+    </footer>
+  )
+}
