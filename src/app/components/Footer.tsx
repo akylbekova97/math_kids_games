@@ -1,4 +1,11 @@
-export function Footer() {
+interface Props {
+  rightClick: () => void
+  leftClick: () => void
+  rightText: string
+  leftText: string
+}
+
+export function Footer({ rightClick, leftClick, rightText, leftText }: Props) {
   return (
     <footer
       className='
@@ -12,6 +19,7 @@ export function Footer() {
     >
       <button
         className='
+          cursor-pointer
           py-[10px]
           px-[15px]
           border-none
@@ -20,15 +28,16 @@ export function Footer() {
           text-[16px]
         '
         type='button'
+        onClick={leftClick}
       >
-        Назад
+        {leftText}
       </button>
 
       <button
         className='
           cursor-pointer
           text-[16px]
-          text-white
+          text-[rgb(255,255,255)]
           w-full
           py-[10px]
           px-[15px]
@@ -43,6 +52,7 @@ export function Footer() {
 
       <button
         className='
+          cursor-pointer
           py-[10px]
           px-[15px]
           border-none
@@ -51,8 +61,9 @@ export function Footer() {
           text-[16px]
         '
         type='button'
+        onClick={rightClick}
       >
-        Далее
+        {rightText}
       </button>
     </footer>
   )

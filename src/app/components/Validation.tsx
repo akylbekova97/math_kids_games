@@ -6,13 +6,14 @@ export function Validation({ isTrue }: ValidationProps) {
   return (
     <div
       className='
-        h-[100px]
-        [@media(max-width:880px)]:h-[70px]
-        [@media(max-width:880px)]:pt-[40px]
-        [@media(max-width:880px)]:pb-[40px]
+        h-[190px]
+        pt-[50px]
+        [@media(max-width:880px)]:h-[120px]
       '
     >
-      {isTrue === null ? null : isTrue ? (
+      {isTrue === null ? (
+        <p className='text-[22px]'></p>
+      ) : isTrue ? (
         <p
           className='
             block
@@ -34,7 +35,7 @@ export function Validation({ isTrue }: ValidationProps) {
             text-[rgb(211,56,25)]
           '
         >
-          Попробуй ещё раз
+          Не правильно! Попробуйте ещё раз 💪
         </p>
       )}
     </div>
